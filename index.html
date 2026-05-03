@@ -164,7 +164,57 @@ footer{
   text-align:center;
   padding:15px;
 }
+/* tombol beli */
+.buy-btn{
+  margin-top:10px;
+  padding:10px 14px;
+  border:none;
+  border-radius:10px;
+  background:var(--coklat);
+  color:white;
+  cursor:pointer;
+  font-size:.9rem;
+}
 
+.buy-btn:hover{
+  background:var(--hijau);
+}
+
+/* keranjang */
+.cart-box{
+  max-width:700px;
+  margin:20px auto;
+  background:white;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 0;
+  border-bottom:1px solid #eee;
+  color:var(--coklat);
+}
+
+.cart-item:last-child{
+  border-bottom:none;
+}
+
+.empty{
+  text-align:center;
+  color:#777;
+}
+
+.cart-total{
+  text-align:center;
+  margin-top:15px;
+  font-size:1.2rem;
+  font-weight:bold;
+  color:var(--coklat);
+}
 /* ANIMATION */
 @keyframes fadeUp{
   from{opacity:0; transform:translateY(30px);}
@@ -323,14 +373,20 @@ animation:float 4s ease-in-out infinite;
       <h3>Choco Chips Cookie 🍪</h3>
       <div class="rating">⭐⭐⭐⭐⭐</div>
       <div class="best">🔥 Best Seller</div>
-     <br>  <button class="beli">Beli 🍪</button><br/>
+     <br><!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Choco Chips Cookie', 12000)">
+  Beli 🍪
+</button><br/>
     </div>
 
     <div class="card">
       <img src="dobelcokocip.jpg">
       <h3>Double Choco Cookie 🍫</h3>
       <div class="rating">⭐⭐⭐⭐</div>
-      <button class="beli">Beli 🍪</button>
+      <!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang(' Double Choco Chips Cookie', 15000)">
+  Beli 🍪
+</button>
     </div>
 
     <div class="card">
@@ -338,14 +394,20 @@ animation:float 4s ease-in-out infinite;
       <h3>Matcha Cookie 🍵</h3>
       <div class="rating">⭐⭐⭐⭐⭐</div>
       <div class="best">🔥 Best Seller</div>
-    <br>  <button class="beli">Beli 🍪</button></br>
+    <br><!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Matcha Cookie', 18000)">
+  Beli 🍪
+</button></br>
     </div>
 
     <div class="card">
       <img src="redvel.jpg">
       <h3>Red Velvet Cookie ❤️</h3>
       <div class="rating">⭐⭐⭐⭐</div>
-      <button class="beli">Beli 🍪</button>
+     <!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Red velvet Cookie', 17000)">
+  Beli 🍪
+</button> 
     </div>
 
     <div class="card">
@@ -353,45 +415,75 @@ animation:float 4s ease-in-out infinite;
       <h3>Brownies Coklat 🍫</h3>
       <div class="rating">⭐⭐⭐⭐⭐</div>
       <div class="best">🔥 Best Seller</div>
-     <br> <button class="beli">Beli 🍪</button><br/>
+     <br> <!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Brownies coklat', 35000)">
+  Beli 🍪
+</button></br>
     </div>
 
     <div class="card">
       <img src="brownislumer.jpg">
       <h3>Brownies Lumer 🤎</h3>
       <div class="rating">⭐⭐⭐⭐</div>
-      <button class="beli">Beli 🍪</button>
+  <!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Brownies lumer', 40000)">
+  Beli 🍪
+</button>
     </div>
 
     <div class="card">
       <img src="donatmini.jpg">
       <h3>Donat Mini 🍩</h3>
       <div class="rating">⭐⭐⭐⭐</div>
-      <button class="beli">Beli 🍪</button>
+     <!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Donat mini', 5000)">
+  Beli 🍪
+</button> 
     </div>
 
     <div class="card">
       <img src="donatcoklat.jpg">
       <h3>Donat Coklat 🍫</h3>
       <div class="rating">⭐⭐⭐⭐⭐</div>
-     <br> <button class="beli">Beli 🍪</button></br>
+     <br> <!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Donat coklat', 7000)">
+  Beli 🍪
+</button> </br>
     </div>
 
     <div class="card">
       <img src="kejukokie.jpg">
       <h3>Cookies Keju 🧀</h3>
       <div class="rating">⭐⭐⭐⭐</div>
-      <button class="beli">Beli 🍪</button>
+     <!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Cookies keju', 20000)">
+  Beli 🍪
+</button> 
     </div>
 
     <div class="card">
       <img src="snackcoklqt.jpg">
       <h3>Snack Coklat 🍫</h3>
       <div class="rating">⭐⭐⭐⭐</div>
-      <button class="beli">Beli 🍪</button>
+      <!-- tombol beli (taruh di setiap card menu) -->
+<button class="buy-btn" onclick="tambahKeranjang('Snack coklat', 3000)">
+  Beli 🍪
+</button>
 
     </div>
   </div>
+  <!-- keranjang (taruh di bawah menu / sebelum form pemesanan) -->
+<section>
+  <h2 class="title">🛒 Keranjang Kamu</h2>
+
+  <div id="cartBox" class="cart-box">
+    <p class="empty">Belum ada pesanan 😆</p>
+  </div>
+
+  <div class="cart-total">
+    Total: <span id="totalHarga">Rp0</span>
+  </div>
+    </section>
 </section>
 <section>
   <h2 class="title">📝 Form Pemesanan</h2>
@@ -441,7 +533,40 @@ bikinHujan();
   🍪 JNJM Cookies Shop 🍪 | Sweet vibes with Jaemin 😆💚
 </footer>
 <body>
+<script>
+let keranjang = [];
+let total = 0;
 
+function tambahKeranjang(nama, harga){
+  keranjang.push({ nama, harga });
+  total += harga;
+  renderKeranjang();
+}
+
+function renderKeranjang(){
+  const cartBox = document.getElementById("cartBox");
+  const totalHarga = document.getElementById("totalHarga");
+
+  if(keranjang.length === 0){
+    cartBox.innerHTML = `<p class="empty">Belum ada pesanan 😆</p>`;
+    totalHarga.innerText = "Rp0";
+    return;
+  }
+
+  cartBox.innerHTML = "";
+
+  keranjang.forEach((item, index) => {
+    cartBox.innerHTML += `
+      <div class="cart-item">
+        <span>${index + 1}. ${item.nama}</span>
+        <span>Rp${item.harga.toLocaleString("id-ID")}</span>
+      </div>
+    `;
+  });
+
+  totalHarga.innerText = "Rp" + total.toLocaleString("id-ID");
+}
+</script>
   <!-- ⬇️ JAVASCRIPT TARUH DI SINI -->
  <script>
 function pesan(){
